@@ -33,7 +33,7 @@ require_once 'assets/includes/db.php';
 
             <div class="card custom-card-2 mt-5">
                 <div class="card-header ">
-                    <h2 class="display-6 text-center">Contact Details Of Clients</h2>
+                    <h5 class="text-center">Contact Details Of Clients</h5>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered">
@@ -64,9 +64,10 @@ require_once 'assets/includes/db.php';
                                 <form method="post" action="assets/functions/functions.php">
                                     <input type="hidden" name="id" value="<?php echo $id ?>">
                                     <td>
-                                        <div class="text-center">
-                                        <button type="submit" name="delete_message" class="btn btn-danger btn-sm">Delete</button>
-                                        </div>
+                                    <form method="post" action="assets/functions/functions.php">
+                                        <input type="hidden" name="id" value="<?php echo $id ?>">
+                                        <button type="submit" name="delete_contact" class="btn btn-danger btn-sm"  onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
+                                    </form>  
                                     </td>
                                 </form>
                         </tr>
@@ -77,6 +78,8 @@ require_once 'assets/includes/db.php';
         </div>
     </section>
     <?php include("assets/content/script.php"); ?>
+    <script>
+        changeNav("contacts-nav");
+    </script>
 </body>
-
 </html>

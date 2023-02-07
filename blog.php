@@ -26,7 +26,7 @@ include("admin/assets/includes/db.php");
                     <div class="blog-details">
                         <div class="row">
                         <?php
-                            $sql = "select * from tbl_blog";
+                            $sql = "select * from tbl_blog order by id DESC";
                             $run = mysqli_query($con, $sql);
                             while ($row = mysqli_fetch_array($run)) {
                                 $id = $row["id"];
@@ -40,8 +40,8 @@ include("admin/assets/includes/db.php");
                                 <a href="#"><img src="admin/assets/images/blog/<?php echo $img ?>" alt="blog image" class="img-fluid"></a>
                                 <h6 class="subhead-color mt-3"><?php echo $title ?></h6>
                                 <p class="para-color"><?php echo $date ?></p>
-                                <p class="para-color desription"><?php echo $explanation ?></p>
-                                <a href="#" class="fw-bold subhead-color view-more text-decoration-none">View More</a>
+                              
+                                <a href="blog_details.php?id=<?php echo $id ?>" class="fw-bold subhead-color view-more text-decoration-none">View More</a>
                             </div>
                         <?php } ?>
                         </div>

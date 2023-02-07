@@ -20,12 +20,12 @@ include("style.php");
             <div class="admin-card">
                 <div class="card">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-lg-11">
-                            <h4 class="card-title ms-0 fw-bold mt-3">SERVICES</h4>
+                      <div class="row align-items-center">
+                        <div class="col-lg-10">
+                            <h4 class="card-title ms-0 fw-bold mb-0">SERVICES</h4>
                         </div>
-                        <div class="card-top col-lg-1 right-end">                                           
-                            <a href="add_service.php" class="btn dashboard-btn me-auto" style="background-color: #38303D;">Add Services</a>
+                        <div class="card-top col-lg-2 text-end">                                           
+                            <a href="add_service.php" class="btn dashboard-btn me-auto btn-sm" style="background-color: #38303D;">Add Service</a>
                         </div>
                       </div>                                   
                     </div>
@@ -63,7 +63,7 @@ include("style.php");
                                 $id = $row["id"];
                                 $title = $row["title"];
                                 $description = $row["description"];                
-                                $explanation = $row["explanation"];
+                                $long_description = $row["long_description"];
                                 $img = $row["img"];                                                               
                         ?>
                         <div class="col-md-3 service card-color mb-3">
@@ -79,7 +79,7 @@ include("style.php");
                                         </form>             
                                         <form method="post" action="assets/functions/functions.php">
                                             <input type="hidden" name="id" value="<?php echo $id ?>">
-                                            <button type="submit" name="delete_service" class="btn btn-danger btn-sm" style="background-color: #ac0404; border: 0;">Delete</button>
+                                            <button type="submit" name="delete_service" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
                                         </form>                            
                                     </div>
                                 </div>
@@ -92,5 +92,8 @@ include("style.php");
         </div>
     </section>
     <?php include("assets/content/script.php"); ?>
+    <script>
+        changeNav("services-nav");
+    </script>
 </body>
 </html>

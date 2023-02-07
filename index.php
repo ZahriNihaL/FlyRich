@@ -52,7 +52,7 @@ include("admin/assets/includes/db.php");
                         <i class="bi bi-airplane flight ms-2"></i>
                     </div>
                     <p class="text-align-justify mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare. Maecenas eleifend fermentum nisl, non dapibus orci gravida vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl magna, dictum at nisl eget, facilisis porttitor nisl.</p>
-                    <button class="button-style mt-2 fw-bold">Contact</button>
+                    <a href="contact.php"><button class="button-style mt-2 fw-bold">Contact</button></a>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@ include("admin/assets/includes/db.php");
                         $id = $row["id"];
                         $title = $row["title"];
                         $description = $row["description"];
-                        $explanation = $row["explanation"];
+                        $long_description = $row["long_description"];
                         $img = $row["img"];
                     ?>
                         <div class="col-lg-3 bottom-margin">
@@ -89,9 +89,8 @@ include("admin/assets/includes/db.php");
                                 <div class="card mt-2" style="width: 18rem;">
                                     <img src="admin/assets/images/service/<?php echo $img ?>" class="card-img-top" alt="service-card image">
                                     <div class="card-body">
-
                                         <p class="card-text para-color"><?php echo $description ?> </p>
-                                        <a href="#" class="text-center subhead-color fw-bold">View More</a>
+                                        <a href="service_details.php?id=<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +98,7 @@ include("admin/assets/includes/db.php");
                     <?php } ?>
                     <div class="col-lg-3 more  bottom-margin">
                         <div class="service-card float">
-                            <a href="#">
+                            <a href="services.php">
                                 <div class="card " style="width: 18rem;">
                                     <div class="card-body">
                                         <h3 class="text-center mt-5">9 More </h3>
@@ -114,10 +113,9 @@ include("admin/assets/includes/db.php");
         </div>
     </section>
 
-    <!-- -------------------------services end--------------------------- -->
+    <!-- -------------------------services end---------------------------->
 
     <!-- -------------------------blog start--------------------------- -->
-
 
     <section class="blog">
         <div class="container">
@@ -130,7 +128,7 @@ include("admin/assets/includes/db.php");
                 <div class="col-lg-6">
                     <div class="row blog-img-details">
                         <?php
-                        $sql = "select * from tbl_blog  LIMIT 3";
+                        $sql = "select * from tbl_blog order by id DESC LIMIT 3";
                         $run = mysqli_query($con, $sql);
                         while ($row = mysqli_fetch_array($run)) {
                             $id = $row["id"];
@@ -139,7 +137,7 @@ include("admin/assets/includes/db.php");
                             $description = $row["description"];
                             $explanation = $row["explanation"];
                             $img = $row["img"];
-                        ?>
+                            ?>
                             <div class="col-lg-6 mt-sm-5 mt-md-3">
                                 <a href="#"><img src="admin/assets/images/blog/<?php echo $img ?>" alt="blog image" class="img-fluid"></a>
                             </div>
@@ -147,19 +145,17 @@ include("admin/assets/includes/db.php");
                                 <h6 class="subhead-color"><?php echo $title ?></h6>
                                 <p class="para-color"><?php echo $date ?></p>
                                 <p class="para-color"><?php echo $description ?></p>
-                                <a href="#" class="fw-bold subhead-color view-more">View More</a>
+                                <a href="blog_details.php?id=<?php echo $id ?>" class="fw-bold subhead-color view-more">View More</a>
                             </div>
                         <?php } ?>
                     </div>
-                    <button class="button-style mt-3">View All</button>
+                    <a href="blog.php"><button class="button-style mt-3">View All</button></a>
                 </div>
-
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
                             <img src="images/blog/4.jpg" alt="" class="img-fluid">
                         </div>
-
                         <div class="col-lg-6 mt-3">
                             <img src="images/blog/5.jpg" alt="" class="img-fluid">
                         </div>
@@ -186,7 +182,7 @@ include("admin/assets/includes/db.php");
 
             <div class="row package-details">
                 <?php
-                $sql = "select * from tbl_package";
+                $sql = "select * from tbl_package LIMIT 4";
                 $run = mysqli_query($con, $sql);
                 while($row = mysqli_fetch_array($run)){
                     $id = $row["id"];
@@ -208,7 +204,7 @@ include("admin/assets/includes/db.php");
                             <div class="d-flex justify-content-between">
                                 <h5 class="subhead-color fw-bold"><?php echo $days ?></h5>
                                 <div class="text-center">
-                                    <a href="#" class="text-decoration-none"><button class="btn-sm ">View Details</button></a>
+                                    <a href="package-details.php?id=<?php echo $id ?>" class="text-decoration-none"><button class="btn-sm ">View Details</button></a>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +213,7 @@ include("admin/assets/includes/db.php");
             <?php } ?>
             </div>
             <div class="text-center">
-                <button class="button-style fw-bold  mt-5">View More</button>
+                <a href="package.php"> <button class="button-style fw-bold  mt-5">View More</button></a>
             </div>
         </div>
     </section>
@@ -233,7 +229,6 @@ include("admin/assets/includes/db.php");
                 <h3 class="fw-bold head-color">Watch Our Youtube Videos</h3>
                 <i class="bi bi-airplane flight ms-2"></i>
             </div>
-
             <div class="row videos">
                 <?php
                 $sql = "select * from tbl_youtube";
@@ -253,10 +248,6 @@ include("admin/assets/includes/db.php");
 
     <!---------------------------youtube end----------------------------->
 
-
-
-
-     
     <!---------------------------testimonial start----------------------------->
 
     <section class="testimonial">
@@ -435,6 +426,7 @@ include("admin/assets/includes/db.php");
     <?php include("footer.php") ?>
 
     <!-- -------------------------footer end--------------------------- -->
+
     <!-- -------------------------script start--------------------------- -->
 
     <?php include("content/script.php") ?>

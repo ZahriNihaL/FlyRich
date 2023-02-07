@@ -5,7 +5,7 @@ include("assets/includes/db.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <?php
     include("style.php");
     ?>
@@ -57,7 +57,7 @@ include("assets/includes/db.php");
                     $img = $row["img"];
                     $title = $row["title"];
                     $description = $row["description"];                
-                    $explanation = $row["explanation"];
+                    $long_description = $row["long_description"];
                 ?>
                     
                 <div class="card custom-card-2 mt-2">
@@ -70,17 +70,18 @@ include("assets/includes/db.php");
                             <div class="mb-3">
                                 <label class="form-label" for="title">Description :</label>
                                 <input type="text" class="form-control" name="description" id="description" value="<?php echo $description ?>" placeholder="Enter the Description" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="title">Explanation :</label>
-                                <input type="text" class="form-control" name="explanation" id="explanation" value="<?php echo $explanation ?>"  placeholder="Enter the Explanation" required>
-                            </div>                           
+                            </div>                                                    
                             <div class="mb-3">
                                 <label class="form-label" for="image">Image :</label>
                                 <input type="file" class="form-control" name="img" id="img">
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="title">Long Description :</label>
+                                <div id="editor"></div>
+                            </div>  
+                            <div class="mb-3">
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
+                                <input type="hidden" name="long_description" id="ld" value="<?php echo htmlspecialchars($long_description) ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
                                 <button type="submit" class="btn submit_btn float-end" name="update_service" style="background-color:38303D;">SUBMIT</button>
                             </div>
@@ -90,6 +91,17 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("services-nav");
+        $(document).ready(function () {
+                var corehtml = $("#ld").val();
+                quill.root.innerHTML = corehtml;
+            })
+
+            quill.on("text-change", function() {
+                $("#ld").val(quill.root.innerHTML);
+            })
+        </script>
 </body>
 </html>
 

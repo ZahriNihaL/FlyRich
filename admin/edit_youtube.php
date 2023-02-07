@@ -53,12 +53,9 @@ include("assets/includes/db.php");
                     $sql = "select * from tbl_youtube where id='$id'";
                     $run = mysqli_query($con,$sql);
                     $row = mysqli_fetch_array($run);
-
                     $name = $row["name"];
-                    $link = $row["link"];
-                    
-                ?>
-                    
+                    $link = $row["link"];                   
+                ?>                   
                 <div class="card custom-card-2 mt-2">
                     <div class="card-body p-4">
                         <form method="post" action="assets/functions/functions.php" enctype="multipart/form-data">  
@@ -80,6 +77,9 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("youtube-nav");
+    </script>
 </body>
 </html>
 

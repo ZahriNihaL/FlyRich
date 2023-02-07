@@ -24,24 +24,11 @@ include("assets/includes/db.php");
                     <div class="col-lg-6">
                         <h4 class="card-title ms-0 fw-bold mt-2">Home</h4>
                     </div>
-                    <!-- <div class="col-lg-6 right-end d-flex ">
-                        <div class="img-bg">
-                            <img src="images/profile pic.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="dropdown">
-                            <a href="" class="dropdown-toggle ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Najm</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              </ul>
-                        </div>
-                    </div> -->
                   </div>                           
                 </div>
             </div>
         </div>
-
+        
           <div class="home-cards">
             <div class="row">
                 <div class="col-lg-2">

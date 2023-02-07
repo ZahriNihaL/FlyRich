@@ -1083,3 +1083,102 @@ header{
 /* --------------------------services end-------------------------------- */
 
 
+
+/* --------------------------service-details start--------------------------- */
+
+.service-details{
+    margin-top: 100px;
+}
+.service-details img{
+    border-radius: 6px;
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+}
+.service-details .heading{
+    background-color: #38303D;
+    padding: 50px;
+}
+.service-details .service-details-contents{
+    margin-top: 100px;
+}
+.service-details .service-details-contents p{
+    text-align: justify;
+}
+.service-details .service-details-contents i{
+    font-size: 15px;
+    color: #ca9760;
+    margin-top: 3px;
+}
+@media(max-width: 991px){
+    .service-details{
+        padding: 10px;
+    }
+    .service-details .service-details-contents{
+        margin-top: 50px;
+    }
+    .service-details-texts{
+        margin-top: 20px;
+    }
+    .service-details img{
+        width: auto;
+        height: auto;
+    }
+}
+
+/* --------------------------blog-details end--------------------------- */
+
+
+/* --------------------------service-details start--------------------------- */
+
+.blog-details-explain{
+    margin-top: 200px;
+}
+.blog-details-explain img{
+    border-radius: 6px;
+    width: 400px;
+    height: 220px;
+    object-fit: cover;
+}
+.blog-details-explain .image-carousel{
+    margin-top: 50px;
+}
+.blog-details-explain .blog-image-details{
+    margin-top: 50px;
+    text-align: justify;
+}
+.blog-details-explain i{
+    font-size: 13px;
+    color: #A3886B;
+    margin-top: 2px;
+}
+.blog-details-explain .image-description{
+    margin-top: 50px;
+}
+.blog-details-explain .image-description p{
+    margin-top: 30px;
+    text-align: justify;
+}
+.blog-details-explain .image-description img{
+    border-radius: 5px;
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+}
+@media(max-width: 991px){
+    .blog-details-explain{
+        padding: 10px;
+        margin-top: 150px;
+    }
+    .blog-details-explain img{
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .blog-details-explain .image-description img{
+        width: auto;
+        height: auto;
+    }
+}
+
+/* --------------------------service-details end--------------------------- */

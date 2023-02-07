@@ -209,7 +209,7 @@ header .image-text .profession{
     height: 50px;
     background-color: #f7f2ee;
     border-left: 3px solid #38303D;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px;
     
 }
 .sidebar li a:hover .icon,
@@ -401,10 +401,15 @@ body.dark .home .text{
     color: red;
 } */
 
-.nav-bg{
-    background-color: #38303D;
-    border-radius: 0px 5px 5px 0px;
+.nav-active{
+    background-color: #38303D!important;
+    border-radius: 5px 5px 5px 5px!important;
 }
+
+.nav-active .text, .nav-active .icon{
+    color: #fff!important;
+}
+
 .login-nav svg{
     color: rgb(255, 255, 255)!important;
 }
@@ -584,3 +589,17 @@ body.dark .home .text{
 }
 
 /* ------------------------login-page start--------------------------- */
+
+.fs-13{
+    font-size: 13px!important;
+}
+
+.btn-theme{
+    background-color: #38303D!important;
+    border-color: #38303D!important;
+    color: #fff!important;
+}
+
+.head-color{
+    color: #38303D!important;
+}

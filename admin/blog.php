@@ -20,12 +20,12 @@ include("style.php");
             <div class="admin-card">
                 <div class="card">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-lg-11">
-                            <h4 class="card-title ms-0 fw-bold mt-3">BLOGS</h4>
+                      <div class="row align-items-center">
+                        <div class="col-lg-10">
+                            <h4 class="card-title ms-0 fw-bold mb-0">BLOGS</h4>
                         </div>
-                        <div class="col-lg-1 right-end">                                           
-                            <a href="add_blog.php" class="btn dashboard-btn me-auto" style="background-color: #38303D;">Add Blog</a>
+                        <div class="col-lg-2 text-end">                                           
+                            <a href="add_blog.php" class="btn dashboard-btn me-auto btn-sm" style="background-color: #38303D;">Add Blog</a>
                         </div>
                       </div>                                   
                     </div>
@@ -71,7 +71,7 @@ include("style.php");
                             <div class="card data-card">
                                 <div class="card-body p-2 text-center">
                                     <img src="assets/images/blog/<?php echo $img ?>" class="img-fluid"> 
-                                    <h5 class="fw-bold mt-2"><?php echo $title ?></h5>
+                                    <h5 class="fw-bold mt-2 mb-0"><?php echo $title ?></h5>
                                     <div class="mt-2"><?php echo $date ?></div>
                                     <div class="d-flex justify-content-center mt-3">
                                         <form method="post" action="edit_blog.php">
@@ -80,7 +80,7 @@ include("style.php");
                                         </form>             
                                         <form method="post" action="assets/functions/functions.php">
                                             <input type="hidden" name="id" value="<?php echo $id ?>">
-                                            <button type="submit" name="delete_blog" class="btn btn-danger btn-sm" style="background-color: #ac0404; border: 0;">Delete</button>
+                                            <button type="submit" name="delete_blog" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
                                         </form>                            
                                     </div>
                                 </div>
@@ -93,5 +93,8 @@ include("style.php");
         </div>
     </section>
     <?php include("assets/content/script.php"); ?>
+    <script>
+        changeNav("blogs-nav");
+    </script>
 </body>
 </html>

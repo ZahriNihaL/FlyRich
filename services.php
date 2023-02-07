@@ -35,7 +35,7 @@ include("style.php");
                         $id = $row["id"];
                         $title = $row["title"];
                         $description = $row["description"];                
-                        $explanation = $row["explanation"];
+                        $long_description = $row["long_description"];
                         $img = $row["img"];                                                               
                     ?>
                     <div class="col-lg-3 bottom-margin">
@@ -45,7 +45,7 @@ include("style.php");
                                 <img src="admin/assets/images/service/<?php echo $img ?>" class="card-img-top" alt="service-card image">
                                 <div class="card-body">                                 
                                     <p class="card-text para-color"><?php echo $description ?></p>
-                                    <a href="#" class="text-center subhead-color fw-bold">View More</a>
+                                    <a href="service_details.php?id=<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
                                 </div>
                             </div>
                         </div>

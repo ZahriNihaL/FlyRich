@@ -69,5 +69,8 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+        changeNav("youtube-nav");
+    </script>
 </body>
 </html>

@@ -9,6 +9,7 @@ include("assets/includes/db.php");
     <?php
     include("style.php");
     ?>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 <title>Services</title>
 </head>
@@ -59,16 +60,17 @@ include("assets/includes/db.php");
                             <div class="mb-3">
                                 <label class="form-label" for="title">Description :</label>
                                 <input type="text" class="form-control" name="description" id="description" placeholder="Enter the Description" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="title">Explanation :</label>
-                                <input type="text" class="form-control" name="explanation" id="explanation" placeholder="Enter the Explanation" required>
-                            </div>                                                
+                            </div>                                                                        
                             <div class="mb-3">
                                 <label class="form-label" for="image">Image :</label>
                                 <input type="file" class="form-control" name="img" id="image">
-                            </div>                                
+                            </div>   
                             <div class="mb-3">
+                                <label class="form-label" for="title">Long Description :</label>
+                                <div id="editor"></div>
+                            </div>                              
+                            <div class="mb-3">
+                                <input type="hidden" name="long_description" id="long_description">
                                 <button type="submit" class="btn btn-success float-end" name="add_service" style="background-color:#38303D;">SUBMIT</button>
                             </div>
                         </form>
@@ -77,5 +79,11 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+              changeNav("services-nav");
+            quill.on("text-change", function() {
+                $("#long_description").val(quill.root.innerHTML);
+            })
+        </script>
 </body>
 </html>

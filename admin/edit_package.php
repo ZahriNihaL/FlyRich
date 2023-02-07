@@ -5,7 +5,7 @@ include("assets/includes/db.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <?php
     include("style.php");
     ?>
@@ -74,10 +74,6 @@ include("assets/includes/db.php");
                                 <input type="text" class="form-control" name="description" id="description" value="<?php echo $description ?>" placeholder="Enter the Description" required>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="title">Long Description :</label>
-                                <input type="text" class="form-control" name="long_description" id="long_description" value="<?php echo $long_description ?>" placeholder="Enter Long Description" required>
-                            </div>
-                            <div class="mb-3">
                                 <label class="form-label" for="title">Amount :</label>
                                 <input type="text" class="form-control" name="amount" id="amount" value="<?php echo $amount ?>"  placeholder="Enter the Amount" required>
                             </div> 
@@ -90,7 +86,12 @@ include("assets/includes/db.php");
                                 <input type="file" class="form-control" name="img" id="img">
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="title">Long Description :</label>
+                                <div id="editor"></div>
+                            </div>
+                            <div class="mb-3">
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
+                                <input type="hidden" name="long_description" id="long_description" value="<?php echo htmlspecialchars($long_description) ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
                                 <button type="submit" class="btn submit_btn float-end" name="update_package" style="background-color:38303D;">SUBMIT</button>
                             </div>
@@ -100,6 +101,17 @@ include("assets/includes/db.php");
             </div>
         </section>
         <?php include("assets/content/script.php"); ?>
+        <script>
+            changeNav("packages-nav");
+            $(document).ready(function () {
+                var corehtml = $("#long_description").val();
+                quill.root.innerHTML = corehtml;
+            })
+
+            quill.on("text-change", function() {
+                $("#long_description").val(quill.root.innerHTML);
+            })
+        </script>
 </body>
 </html>
 

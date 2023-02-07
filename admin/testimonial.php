@@ -20,12 +20,12 @@ include("style.php");
             <div class="admin-card">
                 <div class="card">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-lg-11">
-                            <h4 class="card-title ms-0 fw-bold mt-3">TESTIMONIAL</h4>
+                      <div class="row align-items-center">
+                        <div class="col-lg-10">
+                            <h4 class="card-title ms-0 fw-bold mb-0">TESTIMONIAL</h4>
                         </div>
-                        <div class="col-lg-1 right-end">                                           
-                            <a href="add_testimonial.php" class="btn dashboard-btn me-auto" style="background-color: #38303D;">Add Testimonial</a>
+                        <div class="col-lg-2 text-end">                                           
+                            <a href="add_testimonial.php" class="btn btn-sm dashboard-btn me-auto" style="background-color: #38303D;">Add Testimonial</a>
                         </div>
                       </div>                                   
                     </div>
@@ -80,7 +80,7 @@ include("style.php");
                                         </form>             
                                         <form method="post" action="assets/functions/functions.php">
                                             <input type="hidden" name="id" value="<?php echo $id ?>">
-                                            <button type="submit" name="delete_testimonial" class="btn btn-danger btn-sm"  style="background-color: #ac0404; border: 0;">Delete</button>
+                                            <button type="submit" name="delete_testimonial" class="btn btn-danger btn-sm"  onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
                                         </form>                            
                                     </div>
                                 </div>
@@ -93,5 +93,8 @@ include("style.php");
         </div>
     </section>
     <?php include("assets/content/script.php"); ?>
+    <script>
+        changeNav("testimonial-nav");
+    </script>
 </body>
 </html>

@@ -1,28 +1,30 @@
 <?php
-include("../includes/db.php");
 
+include("../includes/db.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
 require_once "../../../PHPMailer/src/PHPMailer.php";
 require_once "../../../PHPMailer/src/SMTP.php";
-// require_once "../../PHPMailer/src/Exception.php";
-// session_start();
+
+session_start();
+
+if (isset($_POST['logout'])) {
+  unset($_SESSION['flyrich_loggedin']);
+  header("Location:../../login.php");
+}
 
 if (isset($_POST["login"])) {
   $username = mysqli_real_escape_string($con, $_POST["username"]);
   $password = mysqli_real_escape_string($con,$_POST["password"]);
-
   $passhash = hash("sha256", $password);
-
   $sql = "select * from tbl_users where username='$username' and password='$passhash'";
   $run = mysqli_query($con, $sql);
   $count = mysqli_num_rows($run);
   if ($count === 0) {
     header("Location: ../../login.php?error=Invalid credential");
   } else {
-    // $_SESSION["loggedin"] = true; 
+    $_SESSION["flyrich_loggedin"] = true; 
     header("Location: ../../index.php"); 
   }
 }
@@ -30,7 +32,7 @@ if (isset($_POST["login"])) {
   if (isset($_POST["add_service"])) {
     $title = mysqli_real_escape_string($con, $_POST["title"]);
     $description = mysqli_real_escape_string($con, $_POST["description"]);
-    $explanation = mysqli_real_escape_string($con, $_POST["explanation"]);
+    $long_description = mysqli_real_escape_string($con, $_POST["long_description"]);
   
     $img = $_FILES["img"]["name"];
     $tmp_name = $_FILES["img"]["tmp_name"];
@@ -39,7 +41,7 @@ if (isset($_POST["login"])) {
   
     move_uploaded_file($tmp_name, $to);
   
-    $sql = "insert into tbl_service(title,description,explanation,img) values('$title','$description','$explanation','$img')";
+    $sql = "insert into tbl_service(title,description,long_description,img) values('$title','$description','$long_description','$img')";
     $run = mysqli_query($con, $sql);
     if ($run === TRUE) {
       header("Location: ../../service.php?success=service added successfully");
@@ -63,7 +65,7 @@ if (isset($_POST["login"])) {
     $id = $_POST["id"];
     $title = mysqli_real_escape_string($con, $_POST["title"]);
     $description = mysqli_real_escape_string($con, $_POST["description"]);
-    $explanation = mysqli_real_escape_string($con, $_POST["explanation"]);
+    $long_description = mysqli_real_escape_string($con, $_POST["long_description"]);
   
     $img = "";
     if ($_FILES['img']['size'] === 0) {
@@ -78,7 +80,7 @@ if (isset($_POST["login"])) {
       move_uploaded_file($tmp_name, $to);
     }
   
-    $sql = "update tbl_service set title='$title',description='$description',explanation='$explanation',img='$img' where id='$id'";
+    $sql = "update tbl_service set title='$title',description='$description',long_description='$long_description',img='$img' where id='$id'";
     $run = mysqli_query($con, $sql);
     if ($run === TRUE) {
       header("Location: ../../service.php?success=service updated successfully");
@@ -315,6 +317,16 @@ if (isset($_POST["login"])) {
     }
   }
 
+  if (isset($_POST["delete_contact"])) {
+    $id = $_POST["id"];
+    $sql = "delete from tbl_message where id='$id'";
+    $run = mysqli_query($con, $sql);
+    if ($run === TRUE) {
+      header("Location: ../../contact.php?success=contact deleted successfully");
+    } else {
+      header("Location: ../../contact.php?error=failed to delete contact!");
+    }
+  }
   
 if (isset($_POST["update_settings"])) {
   $company_name = mysqli_real_escape_string($con, $_POST["company_name"]);
@@ -328,13 +340,39 @@ if (isset($_POST["update_settings"])) {
   $instagram = mysqli_real_escape_string($con, $_POST["instagram"]);
   $twitter = mysqli_real_escape_string($con, $_POST["twitter"]);
  
-  $sql = "update tbl_company set company_name='$company_name' , address='$address' , place='$place', phone_number1='$phone_number1' , phone_number2='$phone_number2' ,email1='$email1' , link='$link' , facebook='$facebook' , instagram='$instagram' , twitter='$twitter'  where id='1'";
+  $sql = "update tbl_company set company_name='$company_name' , address='$address' , place='$place', phone_number1='$phone_number1' , phone_number2='$phone_number2' ,email='$email' , link='$link' , facebook='$facebook' , instagram='$instagram' , twitter='$twitter'  where id='1'";
   $run = mysqli_query($con, $sql);
 
   if ($run === TRUE) {
     header("Location: ../../settings.php?success=settings updated successfully");
   } else {
     header("Location: ../../settings.php?error=failes to update settings!");
+  }
+}
+
+if (isset($_POST["change_password"])) {
+  $password = $_POST["old_pass"];   
+  $new_password = $_POST["new_pass"];
+  $confirm_password = $_POST["retype_pass"];
+  $passhash = hash("sha256", $password);
+  $sql = "select * from tbl_users where password='$passhash' AND id='1'";
+  $run = mysqli_query($con, $sql);
+  $count = mysqli_num_rows($run);
+  if ($count != 0) {
+      if($new_password == $confirm_password){
+          $newpass_hash = hash("sha256", $new_password);
+          $sql = "update tbl_users set password='$newpass_hash' where id='1'"; 
+          $run = mysqli_query($con, $sql);
+          if($run == TRUE){
+            header("Location: ../../settings.php?success=Password changed successfully!");
+          }else{
+            header("Location: ../../settings.php?error=Failed to change password!");
+          }
+      }else{
+        header("Location: ../../settings.php?error=New passwords not match!");
+      }
+  }else{
+    header("Location: ../../settings.php?error=Old password is incorrect!");
   }
 }
 
