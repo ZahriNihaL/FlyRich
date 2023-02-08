@@ -23,7 +23,7 @@ include("admin/assets/includes/db.php");
                 <div class="row">
                     <div class="col-lg-7"></div>
                     <div class="col-lg-5">
-                        <h1 class="fw-bold ">Lorem ipsum dolor sit <br> amet consectetur </h1>
+                        <h1 class="fw-bold ">Life is either a daring adventure, or nothing at all </h1>
                         <button class="btn mt-3">Book Your Ticket Now</button>
                     </div>
                 </div>
@@ -51,7 +51,9 @@ include("admin/assets/includes/db.php");
                         <h3 class="fw-bold head-color">Start Your Journey With FlyRich</h3>
                         <i class="bi bi-airplane flight ms-2"></i>
                     </div>
-                    <p class="text-align-justify mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare. Maecenas eleifend fermentum nisl, non dapibus orci gravida vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl magna, dictum at nisl eget, facilisis porttitor nisl.</p>
+                    <p class="text-align-justify mt-2">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas. In GCC countries. Fly rich travels and lesuire is a business that provides services to help people plan and book various types of travel experiences, such as vacations, trips, and tours. Some of the services offered by a flyrich travels and lesuire might include flight booking, hotel reservation, car rental, travel insurance, and the creation of customized itineraries. The goal of a travel company is to make the process of planning and booking travel as easy and stress-free as possible, while also offering a wide range of options to meet the needs and preferences of its customers.
+Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"
+</p>
                     <a href="contact.php"><button class="button-style mt-2 fw-bold">Contact</button></a>
                 </div>
             </div>
@@ -101,7 +103,7 @@ include("admin/assets/includes/db.php");
                             <a href="services.php">
                                 <div class="card " style="width: 18rem;">
                                     <div class="card-body">
-                                        <h3 class="text-center mt-5">9 More </h3>
+                                        <h3 class="text-center mt-5">View More </h3>
                                         <img src="images/services/Arrow.png" alt="" class="img-flud mb-5" aria-colcount="">
                                     </div>
                                 </div>
@@ -321,9 +323,29 @@ include("admin/assets/includes/db.php");
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Testimonial</h6>
             <div class="d-flex justify-content-center ">
-                <h3 class="fw-bold head-color">Words From Travel Lovers</h3>
+                <h3 class="fw-bold head-color">Words From Travel Lovers</h3>               
                 <i class="bi bi-airplane flight ms-2"></i>
-            </div>
+            </div>  
+            <?php 
+            if(isset($_GET["error"])){
+            ?>
+                <div class="alert alert-danger text-center mt-2 w-50 ms-auto me-auto" role="alert">
+                    <?php
+                    $error = $_GET["error"];
+                    echo $error;
+                    ?>
+                </div>
+
+            <?php
+            }else if(isset($_GET["success"])){
+            ?>
+                <div class="alert alert-success text-center mt-2 w-50 ms-auto me-auto" role="alert">
+                    <?php
+                    $error = $_GET["success"];
+                    echo $error;
+                    ?>
+                    </div>
+            <?php } ?>        
             <div class="row contact-contents">
                 <div class="col-lg-6">
                     <img src="images/contact/1.jpg" alt="contact image" class="img-fluid">
@@ -373,23 +395,18 @@ include("admin/assets/includes/db.php");
                         </ul>
                     </div>
                 </div>
+                
                 <div class="col-lg-6">
                     <?php
                     $sql = "select * from tbl_message";
                     $run = mysqli_query($con, $sql);
                     $rowcount = mysqli_num_rows($run);
-                    $row = mysqli_fetch_array($run);
-
-                    if ($rowcount == 0) {
-                        echo "error";
-                    } else {
-
+                    $row = mysqli_fetch_array($run);                  
                         $id = $row["id"];
                         $name = $row["name"];
                         $email = $row["email"];
                         $phone_number = $row["phone_number"];
                         $message = $row["message"];
-                    }
                     ?>
                     <form method="POST" action="functions/functions.php">
                         <h6 class="head-color text-center fw-bold">Lorem ipsum dolor sit amet consectetur</h6>

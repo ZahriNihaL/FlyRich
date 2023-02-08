@@ -74,7 +74,7 @@ include("assets/includes/db.php");
                                 <input type="file" class="form-control" name="img" id="image">
                             </div>                                
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-success float-end" name="add_testimonial" style="background-color:#38303D;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm btn-success float-end" name="add_testimonial" style="background-color:#38303D;">SUBMIT</button>
                             </div>
                         </form>
                     </div>

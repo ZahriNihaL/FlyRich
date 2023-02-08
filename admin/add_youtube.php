@@ -61,7 +61,7 @@ include("assets/includes/db.php");
                                 <input type="text" class="form-control" name="link" id="link" placeholder="Enter YouTube Link" required>
                             </div>                                            
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-success float-end" name="add_youtube" style="background-color:#38303D;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm btn-success float-end" name="add_youtube" style="background-color:#38303D;">SUBMIT</button>
                             </div>
                         </form>
                     </div>

@@ -54,8 +54,7 @@ include("style.php");
                         $name = $row["name"];
                         $email = $row["email"];
                         $phone_number = $row["phone_number"];
-                        $message = $row["message"];
-                    
+                        $message = $row["message"];                   
                     ?>
                     <form method="POST" action="functions/functions.php">
                       <div class="mb-3">

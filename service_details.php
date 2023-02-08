@@ -39,7 +39,7 @@ include("style.php");
                 </div>
 
                 <div class="container">
-                    <div class="row service-details-contents">
+                    <div class="row service-details-contents align-items-center">
                     
                         <div class="col-lg-6">
                             <img src="admin/assets/images/service/<?php echo $img ?>" alt="blog details image" class="img-fluid">

@@ -93,7 +93,7 @@ include("assets/includes/db.php");
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
                                 <input type="hidden" name="long_description" id="long_description" value="<?php echo htmlspecialchars($long_description) ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                                <button type="submit" class="btn submit_btn float-end" name="update_package" style="background-color:38303D;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="update_package" style="background-color:38303D;">SUBMIT</button>
                             </div>
                         </form>
                     </div>

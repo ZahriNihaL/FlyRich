@@ -88,7 +88,7 @@ include("assets/includes/db.php");
                             <div class="mb-3">
                                 <input type="hidden" name="old_img" value="<?php echo $img ?>">
                                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                                <button type="submit" class="btn submit_btn float-end" name="update_testimonial" style="background-color:38303D;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm submit_btn float-end" name="update_testimonial" style="background-color:38303D;">SUBMIT</button>
                             </div>
                         </form>
                     </div>

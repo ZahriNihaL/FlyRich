@@ -75,7 +75,7 @@ include("assets/includes/db.php");
                             </div>                              
                             <div class="mb-3">
                             <input type="hidden" name="explanation" id="explanation">
-                                <button type="submit" class="btn btn-success float-end" name="add_blog" style="background-color:#38303D;">SUBMIT</button>
+                                <button type="submit" class="btn btn-sm btn-success float-end" name="add_blog" style="background-color:#38303D;">SUBMIT</button>
                             </div>
                         </form>
                     </div>
