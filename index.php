@@ -23,7 +23,7 @@ include("admin/assets/includes/db.php");
                 <div class="row">
                     <div class="col-lg-7"></div>
                     <div class="col-lg-5">
-                        <h1 class="fw-bold ">Life is either a daring adventure, or nothing at all </h1>
+                        <h1 class="fw-bold ">One’s destination is never a place, but a new way of seeing things</h1>
                         <button class="btn mt-3">Book Your Ticket Now</button>
                     </div>
                 </div>
@@ -52,18 +52,24 @@ include("admin/assets/includes/db.php");
                         <i class="bi bi-airplane flight ms-2"></i>
                     </div>
                     <p class="text-align-justify mt-2">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas. In GCC countries. Fly rich travels and lesuire is a business that provides services to help people plan and book various types of travel experiences, such as vacations, trips, and tours. Some of the services offered by a flyrich travels and lesuire might include flight booking, hotel reservation, car rental, travel insurance, and the creation of customized itineraries. The goal of a travel company is to make the process of planning and booking travel as easy and stress-free as possible, while also offering a wide range of options to meet the needs and preferences of its customers.
-Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"
-</p>
+                    Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"
+                    </p>
                     <a href="contact.php"><button class="button-style mt-2 fw-bold">Contact</button></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --------------------------------about end---------------------------------- -->
+    <!-- --------------------------------about end------------------------------------->
 
-    <!-- -------------------------services start--------------------------- -->
+    <!-- -------------------------services start--------------------------------------->
 
+    <?php
+    $sql = "select * from tbl_service";
+    $run = mysqli_query($con, $sql);
+    $count = mysqli_num_rows($run);
+    if ($count != 0) {  
+    ?>
     <section class="services">
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Services</h6>
@@ -114,11 +120,18 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
             </div>
         </div>
     </section>
+    <?php } ?>
 
     <!-- -------------------------services end---------------------------->
 
     <!-- -------------------------blog start--------------------------- -->
 
+    <?php
+    $sql = "select * from tbl_blog";
+    $run = mysqli_query($con, $sql);
+    $count = mysqli_num_rows($run);
+    if ($count != 0) {  
+    ?>
     <section class="blog">
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Blog</h6>
@@ -169,11 +182,17 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
             </div>
         </div>
     </section>
-
+    <?php } ?>
+    
     <!-- -------------------------blog end--------------------------- -->
 
     <!-- -------------------------package start--------------------------- -->
-
+    <?php
+    $sql = "select * from tbl_package";
+    $run = mysqli_query($con, $sql);
+    $count = mysqli_num_rows($run);
+    if ($count != 0) {  
+    ?>
     <section class="package package-top">
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Packages</h6>
@@ -219,11 +238,16 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
             </div>
         </div>
     </section>
-
+    <?php } ?>
     <!---------------------------package end--------------------------- -->
 
     <!---------------------------youtube start--------------------------- -->
-
+    <?php
+    $sql = "select * from tbl_youtube";
+    $run = mysqli_query($con, $sql);
+    $count = mysqli_num_rows($run);
+    if ($count != 0) {  
+    ?>
     <section class="youtube">
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Videos</h6>
@@ -247,11 +271,17 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
         </div>
         </div>
     </section>
+    <?php } ?>
 
     <!---------------------------youtube end----------------------------->
 
     <!---------------------------testimonial start----------------------------->
-
+    <?php
+    $sql = "select * from tbl_testimonial";
+    $run = mysqli_query($con, $sql);
+    $count = mysqli_num_rows($run);
+    if ($count != 0) {  
+    ?>
     <section class="testimonial">
         <div class="container">
             <h6 class="fw-bold subhead-color text-center">Testimonial</h6>
@@ -314,7 +344,7 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
             </div>
         </div>
     </section>
-
+    <?php } ?>
     <!-- -------------------------testimonial end--------------------------- -->
 
     <!-- -------------------------contact start--------------------------- -->
@@ -335,7 +365,6 @@ Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and
                     echo $error;
                     ?>
                 </div>
-
             <?php
             }else if(isset($_GET["success"])){
             ?>

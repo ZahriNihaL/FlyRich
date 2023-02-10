@@ -10,10 +10,9 @@ require_once "../PHPMailer/src/PHPMailer.php";
 require_once "../PHPMailer/src/SMTP.php";
 require_once "../PHPMailer/src/Exception.php";
 
-/* ------------------------contact-function start--------------------------- */
+/*------------------------contact-function start---------------------------*/
 
 if (isset($_POST["submit"])) {
-
     $mail = new PHPMailer(true);
     $mail->SMTPDebug = 0;
     $mail->isSMTP();
@@ -37,7 +36,6 @@ if (isset($_POST["submit"])) {
     $mail->addAddress("swathikrishnaus2015@gmail.com", "SWATHIKRISHNA US");
     $mail->isHTML(true);
     $mail->Subject = "Contact Forms Of Customers";
-
     $message = "
   <table>
       <tr><td>Name: </td><td>" . $_POST["name"] . "</td></tr>
@@ -50,7 +48,6 @@ if (isset($_POST["submit"])) {
     $mail->Body = $message;
     try {
         $mail->send();
-        
         $name = $_POST["name"];
         $email = $_POST["email"];
         $phone_number = $_POST["phone_number"];
@@ -68,4 +65,4 @@ if (isset($_POST["submit"])) {
     }
 }
 
-/* ------------------------contact-function start--------------------------- */
+/*------------------------contact-function start---------------------------*/

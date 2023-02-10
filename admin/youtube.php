@@ -10,6 +10,7 @@ include("style.php");
 <title>YouTube</title>
 </head>
 <body>
+
     <?php include("assets/content/navbar.php") ?>
     <section class="home">
         <div class="text">
@@ -76,8 +77,3 @@ include("style.php");
     </script>
 </body>
 </html>
-
-
-
-
-

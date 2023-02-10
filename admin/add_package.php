@@ -1,16 +1,13 @@
 <?php
 include("assets/includes/db.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <?php
     include("style.php");
     ?>
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
 <title>Packages</title>
 </head>
 <body>
@@ -28,7 +25,6 @@ include("assets/includes/db.php");
                         </div>
                     </div> 
                 </div>
-
                 <?php
                 if(isset($_GET["error"])){
                 ?>
@@ -68,11 +64,14 @@ include("assets/includes/db.php");
                             <div class="mb-3">
                                 <label class="form-label" for="title">Days :</label>
                                 <input type="text" class="form-control" name="days" id="days" placeholder="Enter Days" required>
-                            </div>                                                
-                            <div class="mb-3">
-                                <label class="form-label" for="image">Image :</label>
-                                <input type="file" class="form-control" name="img" id="image">
-                            </div>  
+                            </div>        
+                            <label class="form-label" id="image_label" for="image">Image :</label>                                        
+                            <div class="mb-3 multiple_image" id="multiple_image">                            
+                                <input type="file" class="form-control" name="img" id="img" multiple="">
+                                <a href="#">
+                                <input type="button" class="btn btn-primary" name="add" id="add" value="+" multiple="" style="border-radius: 20px; background-color:#38303D">
+                                </a>
+                            </div> 
                             <div class="mb-3">
                                 <label class="form-label" for="title">Long Description :</label>
                                 <div id="editor"></div>
@@ -92,6 +91,21 @@ include("assets/includes/db.php");
             quill.on("text-change", function() {
                 $("#long_description").val(quill.root.innerHTML);
             })
+            $(document).ready(function(){
+            var html ='<input type="file" class="form-control" name="img" id="img" multiple=""><input type="button" class="btn btn-danger" name="remove" id="remove" value="-" multiple="" style="border-radius: 20px; background-color:#ac0404">';
+            var max = 6;
+            var x = 1;
+                $("#add").click(function(){
+                    if(x<max){
+                        $("#multiple_image").append(html);
+                        x++;                        
+                    }
+                });
+                $("#multiple_image").on('click','#remove',function(){
+                        $(this).closest('a').remove();
+                        x--;                        
+                });
+            });
         </script>
 </body>
 </html>

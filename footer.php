@@ -20,7 +20,7 @@
                 ?>
                 <div class="col-lg-3">
                     <a href="index.html"><img src="images/footer.png" alt="footer-logo" class="img-fluid"></a>
-                    <p class="light-color">Lorem ipsum dolor sit amet consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet</p>
+                    <p class="light-color">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas</p>
                     <div class="d-flex mt-3">
                         <a href="<?php echo $facebook ?>">
                             <div class="icon-bg me-3 ">

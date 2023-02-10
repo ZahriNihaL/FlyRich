@@ -9,7 +9,7 @@ include("style.php");
 ?>
 <title>Contact - Flyrich travel and leisure</title>
 </head>
-  <body>
+<body>
     <!-- --------------------------------header start---------------------------------- -->
 
     <section class="contact-us">

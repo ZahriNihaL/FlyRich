@@ -1,19 +1,14 @@
 <?php
 require_once 'assets/includes/db.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <?php
     include("style.php");
     ?>
-
-    <title>Contact Datas</title>
+    <title>Contacts</title>
 </head>
-
 <body>
 
     <?php include("assets/content/navbar.php") ?>

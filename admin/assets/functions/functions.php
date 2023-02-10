@@ -160,6 +160,8 @@ if (isset($_POST["login"])) {
     $days = mysqli_real_escape_string($con, $_POST["days"]);
   
     $img = $_FILES["img"]["name"];
+    foreach ($img as $key => $value){
+    $img = $_FILES["img"]["name"][$key];
     $tmp_name = $_FILES["img"]["tmp_name"];
   
     $to = "../../assets/images/package/" . $img;
@@ -174,6 +176,7 @@ if (isset($_POST["login"])) {
       header("Location: ../../package.php?error=failed to add package!");
     }
   }
+}
   
   if (isset($_POST["delete_package"])) {
     $id = $_POST["id"];

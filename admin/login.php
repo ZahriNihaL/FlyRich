@@ -3,17 +3,13 @@ include("assets/includes/db.php");
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <?php
-
     session_start();
     if (isset($_SESSION["flyrich_loggedin"])) {
         header("Location: index.php");
     }
-
     ?>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,10 +21,8 @@ include("assets/includes/db.php");
     <link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <link href="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
     <title>Login</title>
 </head>
-
 <body>
     <section class="login-page">
         <div class="container">

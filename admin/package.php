@@ -10,7 +10,7 @@ include("assets/includes/db.php");
 include("style.php");
 ?>
 
-<title>Services</title>
+<title>Packages</title>
 </head>
 <body>
 
