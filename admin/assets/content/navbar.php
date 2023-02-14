@@ -1,12 +1,13 @@
 <nav class="sidebar">
     <header>
-        <div class="image-text">      
+        <div class="image-text text-center">      
             <br>
-            <div class="text logo-text">
+            <div class="text logo-text" id="nav-large-icon">
                 <img src="../images/fav-icon.png" alt="flyrich-logo">
                 <span class="name text-center">FLYRICH</span>
                 <span class="profession text-center">Travelling Website</span>
             </div>
+            <img src="../images/fav-icon.png" class="d-none" width="50" id="nav-small-icon">
         </div>
         <br>
         <i class='bx bx-chevron-right toggle'></i>
@@ -14,7 +15,13 @@
     <div class="menu-bar">
         <div class="menu">
             <br>
-            <ul class="menu-links">                          
+            <ul class="menu-links"> 
+                <li class="nav-link" id="home-nav">
+                    <a href="index.php">
+                    <i class="bi bi-house me-2 icon"></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>                         
                 <li class="nav-link" id="services-nav">
                     <a href="service.php">
                     <i class="bi bi-card-checklist me-2 icon"></i>

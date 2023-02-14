@@ -25,15 +25,15 @@ include("style.php");
                         <h3 class="fw-bold head-color">All About Flyrich Travel & Leisure</h3>
                         <i class="bi bi-airplane flight ms-2"></i>
                     </div>
-                    <p class=" about-us-para text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis ex, aliquam vel dignissim ut, fermentum sed mauris. Maecenas sollicitudin id massa sed auctor. Donec in leo diam. Aenean in porta arcu. Proin ac commodo libero, ac dignissim velit. Nulla convallis justo vehicula odio aliquam, at mollis lectus pulvinar. Aliquam erat volutpat. Quisque nibh dolor, aliquet vitae porttitor sed, egestas sed ex. Sed id gravida arcu. Sed at ipsum ante.</p>
+                    <p class=" about-us-para text-center mt-3">Flyrich travel and lesuire is one of the largest integrated and leading Travel and Tourism Companies based in kerala and other country  <br>provide high level tour and travel facilities world-over and more particularly in kerala.</p>
                     <div class="row about-us-img">
                         <div class="col-lg-6">
                             <img src="images/about/about-us/2.jpg" alt="about image" class="img-fluid">
                         </div>
                         <div class="col-lg-6 about-texts">
-                            <h5 class="head-color fw-bold">Lorem ipsum dolor sit amet</h5>
-                            <p class="mt-3 about-us-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis ex, aliquam vel dignissim ut, fermentum sed mauris. Maecenas sollicitudin id massa sed auctor. Donec in leo diam. Aenean in porta arcu. Proin ac commodo libero, ac dignissim velit. Nulla convallis justo vehicula odio aliquam, at mollis lectus pulvinar. Aliquam erat volutpat. Quisque nibh dolor, aliquet vitae porttitor sed, egestas sed ex. Sed id gravida arcu. Sed at ipsum ante.</p>
-                            <p class="about-us-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis ex, aliquam vel dignissim ut, fermentum sed mauris. Maecenas sollicitudin id massa sed auctor. Donec in leo diam. Aenean in porta arcu. Proin ac commodo libero, ac dignissim velit. Nulla convallis justo vehicula odio aliquam, at mollis lectus pulvinar. Aliquam erat volutpat.</p>
+                            <h5 class="head-color fw-bold">Start Your Journey With FlyRich</h5>
+                            <p class="mt-3 about-us-description">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas. In GCC countries Flyrich travels and lesuire is a business that provides services to help people plan and book various types of travel experiences, such as vacations, trips, and tours. Some of the services offered by a flyrich travels and lesuire might include flight booking, hotel reservation, car rental, travel insurance, and the creation of customized itineraries. The goal of a travel company is to make the process of planning and booking travel as easy and stress-free as possible, while also offering a wide range of options to meet the needs and preferences of its customers.
+                            <br><br>Our head quarter is in Palakkad, Kerala. We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"</p>
                             <div class="about-services mt-4">
                                 <div class="row">
                                     <div class="col-lg-3">
@@ -116,11 +116,11 @@ include("style.php");
                         <div class="row">
                             <div class="col-lg-3 explanation">
                                 <h5 class="subhead-color fw-bold text-center">Vision</h5>
-                                <p class="para-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare. Maecenas eleifend fermentum nisl, non dapibus orci gravida vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl magna, dictum at nisl eget, facilisis porttitor nisl.</p>
+                                <p class="para-color">Our aim is to provide every traveler that comes walking through our door whether for business or pleasure, with the best experience they could ever get. From affordable hotel accommodations for short business trips or travels to the most luxurious hotels you can find at your destination, our goal is to offer a solution. In case you’re looking for the best hotel websites around you, your search ends right here with us!</p>
                             </div>
                             <div class="col-lg-3 explanation">
                                 <h5 class="subhead-color fw-bold text-center">Mission</h5>
-                                <p class="para-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare. Maecenas eleifend fermentum nisl, non dapibus orci gravida vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl magna, dictum at nisl eget, facilisis porttitor nisl.</p>
+                                <p class="para-color">You are a valued customer, and we sincerely thank you for choosing to confirm your travels needs here at flyrich travels and lesuire whether they be for personal or business purposes. Based in palakkad, koppam, we strive to work with a vast network of travel partners, so that we can bring you the best travel experience possible!</p>
                             </div>
                             <div class="col-lg-6">
                                 <img src="images/about/about-us/3.jpg" alt="" class="img-fluid">

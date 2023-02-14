@@ -8,16 +8,6 @@ include("admin/assets/includes/db.php");
   <?php
   include("style.php");
   ?>
-  <title>blog-details - Flyrich travel and leisure</title>
-</head>
-
-<body>
-  <!-- --------------------------------header start------------------------->
-
-  <?php include("content/navbar.php") ?>
-
-  <!-- -------------------------about-us start--------------------------- -->
-
   <?php
   $pack_id = $_GET["id"];
   $sql = "select * from tbl_package where id='$pack_id'";
@@ -30,7 +20,17 @@ include("admin/assets/includes/db.php");
   $amount = $row["amount"];
   $days = $row["days"];
   $img = $row["img"];
-  ?>l̥
+  ?>
+  <title><?php echo $title ?> - Flyrich travel and leisure</title>
+</head>
+
+<body>
+  <!-- --------------------------------header start------------------------->
+
+  <?php include("content/navbar.php") ?>
+
+  <!-- -------------------------about-us start--------------------------- -->
+
 
   <section class="blog-details-explain">
     <div class="container">
@@ -42,22 +42,43 @@ include("admin/assets/includes/db.php");
       <div class="image-carousel">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-lg-3">
-                  <img src="images/blog/blog-details/1.jpg" alt="blog-details-explain image" class="img-fluid">
-                </div>
-                <div class="col-lg-3">
-                  <img src="images/blog/blog-details/2.jpg" alt="blog-details-explain image" class="img-fluid">
-                </div>
-                <div class="col-lg-3">
-                  <img src="images/blog/blog-details/3.jpg" alt="blog-details-explain image" class="img-fluid">
-                </div>
-                <div class="col-lg-3">
-                  <img src="images/blog/blog-details/4.jpg" alt="blog-details-explain image" class="img-fluid">
-                </div>
-              </div>
-            </div>
+
+          <div class="carousel-item active">
+                        <div class="row justify-content-center">
+
+                          <?php
+                            $sql = "select * from tbl_package_img where pid='$pack_id'";
+                            $run = mysqli_query($con , $sql);
+                            $count = mysqli_num_rows($run);
+                            $loop = 0;
+
+                            while($row = mysqli_fetch_array($run)){
+
+                              $loop ++;
+                              $img = $row["img"];
+                          ?>
+
+                          <div class="col-lg-4">
+                              <img src="http://localhost/github/FlyRich/admin/assets/images/package/<?php echo $id ?>/<?php echo $img ?>" alt="blog-details-explain image" class="img-fluid w-100">
+                          </div>
+
+                            <?php
+                              if ($loop % 3 == 0 || $loop == $count) {
+                            ?>
+
+                        </div>
+                      </div>
+
+                      <?php
+                        if ($loop !=  $count) { 
+                      ?>
+                        <div class="carousel-item">
+                        <div class="row">
+
+                        <?php }
+                            }
+                          }
+                        ?>
           </div>
         </div>
         <div class="row blog-image-details">

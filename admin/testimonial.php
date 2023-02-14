@@ -71,7 +71,7 @@ include("style.php");
                             <div class="card data-card">
                                 <div class="card-body p-2 text-center">
                                     <img src="assets/images/testimonial/<?php echo $img ?>" class="img-fluid"> 
-                                    <h5 class="fw-bold mb-0 mt-3"><?php echo $name ?></h5>                                 
+                                    <h6 class="fw-bold mb-0 mt-3"><?php echo $name ?></h6>                                 
                                     <div><?php echo $designation ?></div>                                   
                                     <div class="d-flex justify-content-center mt-2">
                                         <form method="post" action="edit_testimonial.php">

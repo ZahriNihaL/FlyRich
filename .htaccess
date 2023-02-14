@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^service/([0-9A-ZA-Z-]+)$ service_details.php?id=$1 [QSA,NC,L]
+RewriteRule ^blog/([0-9A-ZA-Z-]+)$ blog_details.php?id=$1 [QSA,NC,L]
+RewriteRule ^package/([0-9A-ZA-Z-]+)$ package_details.php?id=$1 [QSA,NC,L]
+

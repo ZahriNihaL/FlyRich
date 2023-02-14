@@ -6,6 +6,8 @@ const body = document.querySelector('body'),
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
+    $("#nav-large-icon").toggleClass("d-none");
+    $("#nav-small-icon").toggleClass("d-none");
 })
 
 let toolbaroptions = [

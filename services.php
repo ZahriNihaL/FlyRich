@@ -41,11 +41,11 @@ include("style.php");
                     <div class="col-lg-3 bottom-margin">
                         <div class="service-card float">
                             <h5 class="head-color fw-bold text-center"><?php echo $title ?></h5>
-                            <div class="card mt-2" style="width: 18rem;">
+                            <div class="card mt-2" >
                                 <img src="admin/assets/images/service/<?php echo $img ?>" class="card-img-top" alt="service-card image">
                                 <div class="card-body">                                 
                                     <p class="card-text para-color"><?php echo $description ?></p>
-                                    <a href="service_details.php?id=<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
+                                    <a href="service/<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
                                 </div>
                             </div>
                         </div>

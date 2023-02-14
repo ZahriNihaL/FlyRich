@@ -33,7 +33,12 @@ if (isset($_POST["submit"])) {
     $mail->Port = 587;
     $mail->From = "zaahrinrcet@gmail.com";
     $mail->FromName = "Hanna Zahrin";
-    $mail->addAddress("swathikrishnaus2015@gmail.com", "SWATHIKRISHNA US");
+    
+    $sql = "select * from tbl_company where id='1'";
+    $run = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($run);
+    $email2 = $row["email2"];
+    $mail->addAddress($email2, $email2);
     $mail->isHTML(true);
     $mail->Subject = "Contact Forms Of Customers";
     $message = "

@@ -20,11 +20,10 @@ include("admin/assets/includes/db.php");
 
         <section class="home">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-7"></div>
-                    <div class="col-lg-5">
-                        <h1 class="fw-bold ">One’s destination is never a place, but a new way of seeing things</h1>
-                        <button class="btn mt-3">Book Your Ticket Now</button>
+                <div class="row justify-content-center home-row">
+                    <div class="col-lg-6 text-center">
+                        <h3 class="fw-bold ">One’s destination is never a place,<br> but a new way of seeing things</h3>
+                        <a href="about"><button class="btn mt-3">View More</button></a>
                     </div>
                 </div>
 
@@ -51,10 +50,11 @@ include("admin/assets/includes/db.php");
                         <h3 class="fw-bold head-color">Start Your Journey With FlyRich</h3>
                         <i class="bi bi-airplane flight ms-2"></i>
                     </div>
-                    <p class="text-align-justify mt-2">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas. In GCC countries. Fly rich travels and lesuire is a business that provides services to help people plan and book various types of travel experiences, such as vacations, trips, and tours. Some of the services offered by a flyrich travels and lesuire might include flight booking, hotel reservation, car rental, travel insurance, and the creation of customized itineraries. The goal of a travel company is to make the process of planning and booking travel as easy and stress-free as possible, while also offering a wide range of options to meet the needs and preferences of its customers.
-                    Our head quarter is in Palakkad,Kerala.We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"
+                    <p class="text-align-justify mt-2">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas. In GCC countries, Flyrich travels and lesuire is a business that provides services to help people plan and book various types of travel experiences, such as vacations, trips, and tours. Some of the services offered by a flyrich travels and lesuire might include flight booking, hotel reservation, car rental, travel insurance, and the creation of customized itineraries. The goal of a travel company is to make the process of planning and booking travel as easy and stress-free as possible, while also offering a wide range of options to meet the needs and preferences of its customers.
+                    <br><br>
+                    Our head quarter is in Palakkad, Kerala. We offer a wide range of Travel, tour and related services enriching our corporate slogan "To Travel is to live"
                     </p>
-                    <a href="contact.php"><button class="button-style mt-2 fw-bold">Contact</button></a>
+                    <a href="about.php"><button class="button-style mt-2 fw-bold">View More</button></a>
                 </div>
             </div>
         </div>
@@ -94,20 +94,20 @@ include("admin/assets/includes/db.php");
                             <div class="service-card float">
                                 <h5 class="head-color fw-bold text-center"><?php echo $title ?></h4>
                                 </h5>
-                                <div class="card mt-2" style="width: 18rem;">
+                                <div class="card mt-2">
                                     <img src="admin/assets/images/service/<?php echo $img ?>" class="card-img-top" alt="service-card image">
                                     <div class="card-body">
                                         <p class="card-text para-color"><?php echo $description ?> </p>
-                                        <a href="service_details.php?id=<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
+                                        <a href="service/<?php echo $id ?>" class="text-center subhead-color fw-bold">View More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     <?php } ?>
                     <div class="col-lg-3 more  bottom-margin">
-                        <div class="service-card float">
+                        <div class="service-card float w-100">
                             <a href="services.php">
-                                <div class="card " style="width: 18rem;">
+                                <div class="card " >
                                     <div class="card-body">
                                         <h3 class="text-center mt-5">View More </h3>
                                         <img src="images/services/Arrow.png" alt="" class="img-flud mb-5" aria-colcount="">
@@ -160,13 +160,13 @@ include("admin/assets/includes/db.php");
                                 <h6 class="subhead-color"><?php echo $title ?></h6>
                                 <p class="para-color"><?php echo $date ?></p>
                                 <p class="para-color"><?php echo $description ?></p>
-                                <a href="blog_details.php?id=<?php echo $id ?>" class="fw-bold subhead-color view-more">View More</a>
+                                <a href="blog/<?php echo $id ?>" class="fw-bold subhead-color view-more">View More</a>
                             </div>
                         <?php } ?>
                     </div>
                     <a href="blog.php"><button class="button-style mt-3">View All</button></a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-md-block">
                     <div class="row">
                         <div class="col-lg-12">
                             <img src="images/blog/4.jpg" alt="" class="img-fluid">
@@ -216,7 +216,7 @@ include("admin/assets/includes/db.php");
                 <div class="col-lg-3 mt-4">
                     <div class="card float " style="width: 18rem;">
                         <div class="card-body">
-                            <img src="admin/assets/images/package/<?php echo $img ?>" class="card-img-top" alt="package image">
+                            <img src="admin/assets/images/package/<?php echo $id ?>/<?php echo $img ?>" class="card-img-top" alt="package image">
                             <div class="days">
                                 <h6 class="text-white fw-bold text-center"><?php echo $amount ?></h6>
                             </div>
@@ -225,7 +225,7 @@ include("admin/assets/includes/db.php");
                             <div class="d-flex justify-content-between">
                                 <h5 class="subhead-color fw-bold"><?php echo $days ?></h5>
                                 <div class="text-center">
-                                    <a href="package-details.php?id=<?php echo $id ?>" class="text-decoration-none"><button class="btn-sm ">View Details</button></a>
+                                    <a href="package/<?php echo $id ?>" class="text-decoration-none"><button class="btn-sm ">View Details</button></a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@ include("admin/assets/includes/db.php");
             <?php } ?>
             </div>
             <div class="text-center">
-                <a href="package.php"> <button class="button-style fw-bold  mt-5">View More</button></a>
+                <a href="packages.php"> <button class="button-style fw-bold  mt-5">View More</button></a>
             </div>
         </div>
     </section>
@@ -276,6 +276,7 @@ include("admin/assets/includes/db.php");
     <!---------------------------youtube end----------------------------->
 
     <!---------------------------testimonial start----------------------------->
+
     <?php
     $sql = "select * from tbl_testimonial";
     $run = mysqli_query($con, $sql);
@@ -297,42 +298,45 @@ include("admin/assets/includes/db.php");
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="d-none" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="card">
-                            <img src="images/testimonial/1.jpg" class="card-img-top" alt="testimonial image" aria-colcount="img-fluid">
-                            <div class="card-body">
-                              <h5 class="card-title subhead-color fw-bold">Lorem ipsum dolor sit amet!</h5>
-                              <p class="card-text para-color mt-4"><i class="fa fa-quote-left me-2"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare.<i class="fa fa-quote-right ms-2"></i> </p>
-                              <h6 class="fw-bold subhead-color mt-4">Michal Brink</h6>
-                              <p class="subhead-color">Travel Vlogger</p>
+                      <div class="carousel-item active"> 
+                       <div class="row">                    
+                        <?php
+                            $sql = "select * from tbl_testimonial";
+                            $run = mysqli_query($con , $sql);
+                            $count = mysqli_num_rows($run);
+                            $loop = 0;
+                            while($row = mysqli_fetch_array($run)){
+                                $loop ++;
+                                $title = $row["title"];
+                                $description = $row["description"];
+                                $name = $row["name"];
+                                $designation = $row["designation"];                                                                        
+                                $img = $row["img"];  
+                            ?>
+                            <div class="card">
+                                <img src="admin/assets/images/testimonial/<?php echo $img ?>" class="card-img-top" alt="testimonial image" aria-colcount="img-fluid">
+                                <div class="card-body">
+                                    <h5 class="card-title subhead-color fw-bold"><?php echo $title ?></h5>
+                                    <p class="card-text para-color mt-4"><i class="fa fa-quote-left me-2"></i><?php echo $description ?><i class="fa fa-quote-right ms-2"></i> </p>
+                                    <h6 class="fw-bold subhead-color mt-4"><?php echo $name ?></h6>
+                                    <p class="subhead-color"><?php echo $designation ?></p>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-
-                      <div class="carousel-item">
-                        <div class="card">
-                            <img src="images/testimonial/1.jpg" class="card-img-top" alt="testimonial image" aria-colcount="img-fluid">
-                            <div class="card-body">
-                              <h5 class="card-title subhead-color fw-bold">Lorem ipsum dolor sit amet!</h5>
-                              <p class="card-text para-color mt-4"><i class="fa fa-quote-left me-2"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare.<i class="fa fa-quote-right ms-2"></i> </p>
-                              <h6 class="fw-bold subhead-color mt-4">Michal Brink</h6>
-                              <p class="subhead-color">Travel Vlogger</p>
-                            </div>
-                          </div>
-                      </div>
-
-                      <div class="carousel-item">
-                        <div class="card">
-                            <img src="images/testimonial/1.jpg" class="card-img-top" alt="testimonial image" aria-colcount="img-fluid">
-                            <div class="card-body">
-                              <h5 class="card-title subhead-color fw-bold">Lorem ipsum dolor sit amet!</h5>
-                              <p class="card-text para-color mt-4"><i class="fa fa-quote-left me-2"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu lectus vel tellus accumsan laoreet nec vel ligula. Donec eget sollicitudin magna. Suspendisse commodo mi eget interdum ornare.<i class="fa fa-quote-right ms-2"></i> </p>
-                              <h6 class="fw-bold subhead-color mt-4">Michal Brink</h6>
-                              <p class="subhead-color">Travel Vlogger</p>
-                            </div>
-                          </div>
-                      </div>
-
+                            <?php
+                              if ($loop % 1 == 0 || $loop == $count) {
+                            ?>  
+                       </div>                                               
+                      </div>                                                                         
+                        <?php
+                            if ($loop !=  $count) { 
+                        ?>
+                        <div class="carousel-item">
+                        <div class="row">
+                        <?php }
+                            }
+                          }
+                        ?>
+                       
                     </div>
                     <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <i class="bi bi-caret-left"></i>
@@ -344,7 +348,7 @@ include("admin/assets/includes/db.php");
             </div>
         </div>
     </section>
-    <?php } ?>
+   <?php } ?>
     <!-- -------------------------testimonial end--------------------------- -->
 
     <!-- -------------------------contact start--------------------------- -->
@@ -426,19 +430,8 @@ include("admin/assets/includes/db.php");
                 </div>
                 
                 <div class="col-lg-6">
-                    <?php
-                    $sql = "select * from tbl_message";
-                    $run = mysqli_query($con, $sql);
-                    $rowcount = mysqli_num_rows($run);
-                    $row = mysqli_fetch_array($run);                  
-                        $id = $row["id"];
-                        $name = $row["name"];
-                        $email = $row["email"];
-                        $phone_number = $row["phone_number"];
-                        $message = $row["message"];
-                    ?>
                     <form method="POST" action="functions/functions.php">
-                        <h6 class="head-color text-center fw-bold">Lorem ipsum dolor sit amet consectetur</h6>
+                        <h6 class="head-color text-center fw-bold">If you have any query, Please contact us!</h6>
                         <div class="mb-3 mt-4">
                             <label for="name" class="form-label para-color">Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">

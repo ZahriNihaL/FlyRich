@@ -1,19 +1,15 @@
 <?php
 include("assets/includes/db.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <?php
 include("style.php");
 ?>
-
 <title>Packages</title>
 </head>
 <body>
-
     <?php include("assets/content/navbar.php") ?>
     <section class="home">
         <div class="text">
@@ -60,19 +56,19 @@ include("style.php");
                             $sql = "select * from tbl_package";
                             $run = mysqli_query($con, $sql);
                             while($row = mysqli_fetch_array($run)){
-                                $id = $row["id"];
+                                $id = $row["id"];                            
                                 $title = $row["title"];
                                 $description = $row["description"];  
                                 $long_description = $row["long_description"];              
                                 $amount = $row["amount"];
                                 $days = $row["days"];
-                                $img = $row["img"];                                                               
+                                $main_img = $row["img"];                                                               
                         ?>
                         <div class="col-md-3 package card-color mb-3">
                             <div class="card data-card">
                                 <div class="card-body p-2 text-center">
-                                    <img src="assets/images/package/<?php echo $img ?>" class="img-fluid"> 
-                                    <h5 class="fw-bold mt-2"><?php echo $title ?></h5>
+                                    <img src="assets/images/package/<?php echo $id ?>/<?php echo $main_img ?>" class="img-fluid"> 
+                                    <h6 class="fw-bold mt-2"><?php echo $title ?></h6>
                                     <div class="mt-2"><?php echo $description ?></div>                             
                                     <div class="d-flex justify-content-center mt-3">
                                         <form method="post" action="edit_package.php">

@@ -69,7 +69,7 @@ header{
     0%, 100% { background-image: url("../images/home-bg.jpg"); }
     25% { background-image: url("../images/2.jpg"); }
     50% { background-image: url("../images/3.jpg"); }
-    75% { background-image: url("../images/3.jpg"); }
+    /* 75% { background-image: url("../images/3.jpg"); } */
     /* 50%, 61% { background-image: url("../images/4.jpg"); } */
     /* 62%, 74% { background-image: url("../images/5.jpg"); }
     75%, 86% { background-image: url("../images/6.jpg"); }
@@ -183,10 +183,15 @@ header{
 .home{
     padding-top: 200px;
 }
-.home h1{
-    font-size: 50px;
-    margin-top: 100px;
+.home h3{
+    font-size: 35px;
    color: #F2EEEA;
+}
+.home-row{
+    position: absolute;
+    width: 100%;
+    top: 75%;
+    transform: translateY(-50%);
 }
 .home button{
     background-color: #A3886B;
@@ -205,9 +210,8 @@ header{
     .home{
         padding: 10px;
     }
-    .home h1{
-        font-size: 40px;
-        margin-top: 250px;
+    .home h3{
+        font-size: 30px;
     }
 }
 
@@ -251,8 +255,8 @@ header{
     }
     .about .about-texts{
         margin: 0 auto;
-        padding: 10px;
-        margin-top: 10px;
+        padding: 30px;
+        margin-top: 20px;
     }
 }
 
@@ -488,6 +492,7 @@ header{
     border-radius: 50%;
     height: 150px;
     width: 150px;
+    object-fit: cover;
     margin: 0 auto;
     display: block;
     margin-top: -100px;
@@ -969,8 +974,8 @@ header{
     .our-blog .blog-details img{
         border-radius: 10px;
         transition: 0.3s ease;
-        object-fit: fill;
-        width: 250px;
+        object-fit: cover;
+        width:100%;
         height: 160px;
     }
     .our-blog .blog-details img:hover{
@@ -1075,6 +1080,7 @@ header{
     }
     .package-top{
         margin-top: 100px;
+        padding-bottom: 50px;
     }
     .package-details{
         margin-top: 30px;

@@ -44,18 +44,7 @@ include("style.php");
                         ?>
                     </div>
                 <?php } ?>
-                  <?php
-                    $sql = "select * from tbl_message";
-                    $run = mysqli_query($con, $sql);
-                    $rowcount = mysqli_num_rows($run);
-                    $row = mysqli_fetch_array($run);
-
-                        $id = $row["id"];
-                        $name = $row["name"];
-                        $email = $row["email"];
-                        $phone_number = $row["phone_number"];
-                        $message = $row["message"];                   
-                    ?>
+                  
                     <form method="POST" action="functions/functions.php">
                       <div class="mb-3">
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
@@ -93,15 +82,15 @@ include("style.php");
                     <div class="d-flex contact-icons justify-content-center mt-4">
                       <a href="#">
                         <div class="icon-bg me-3">
-                          <a href="<?php echo $facebook ?>"><i class="fa fa-facebook-f facebook"></i></a>
+                          <a href="https://facebook.com/<?php echo $facebook ?>" target="_blank"><i class="fa fa-facebook-f facebook"></i></a>
                       </div>
                       </a>
                       <a href="#">
                         <div class="icon-bg me-3">
-                          <a href="<?php echo $instagram ?>"><i class="fa fa-instagram instagram"></i></a>
+                          <a href="https://instagram.com/<?php echo $instagram ?>" target="_blank"><i class="fa fa-instagram instagram"></i></a>
                         </div>
                       </a>
-                      <a href="<?php echo $twitter ?>">
+                      <a href="https://twitter.com/<?php echo $twitter ?>" target="_blank">
                         <div class="icon-bg me-3">
                           <a href="#"><i class="fa fa-twitter twitter"></i></a>
                         </div>
@@ -115,10 +104,12 @@ include("style.php");
                 <div class="right-bg-contents">
                   <h6 class="fw-bold light-color ">Contact</h6>
                   <div class="d-flex mt-3">
-                      <h3 class="fw-bold light-color">Contact Us If You Have <br> Any Queries?</h3>
+                      <h3 class="fw-bold light-color">If You Have <br> Any Queries, Contact Us</h3>
                       <i class="bi bi-airplane flight ms-2"></i>
                   </div>
-                  <p class="contact-us-texts">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis ex, aliquam vel dignissim ut, fermentum sed mauris. Maecenas sollicitudin id massa sed auctor. Donec in leo diam. Aenean in porta arcu.</p>
+                  <p class="contact-us-texts">If you'd like to know more about our services feel free to get in touch.
+                    Our operators will provide you with all the information about your journey!
+                  </p>
                 </div>
               </div>
             </div>
@@ -131,8 +122,8 @@ include("style.php");
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.1194886692715!2d76.18502246524142!3d10.878515510274623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cfb933471375%3A0x239150190e4b9e60!2sKT%20ARCADE!5e0!3m2!1sen!2sin!4v1675154497184!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
               <div class="col-lg-6">
-                <h6 class="fw-bold head-color">Lorem ipsum dolor sit amet</h6>
-                <h5 class="subhead-color fw-bold mt-4"><?php echo $company_name ?></h5>
+                <h6 class="fw-bold head-color mb-0">Our Details</h6>
+                <h5 class="subhead-color fw-bold mt-1"><?php echo $company_name ?></h5>
                 <div class="d-flex mt-4 contact-us-details">
                   <div class="d-flex me-4">
                     <i class="bi bi-geo-alt-fill"></i>

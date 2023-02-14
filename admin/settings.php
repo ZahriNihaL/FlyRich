@@ -62,6 +62,7 @@ include("style.php");
                         $phone_number1 = $row["phone_number1"];
                         $phone_number2 = $row["phone_number2"];
                         $email = $row["email"];
+                        $email2 = $row["email2"];
                         $link = $row["link"];
                         $facebook = $row["facebook"];
                         $instagram = $row["instagram"];
@@ -84,16 +85,20 @@ include("style.php");
                                         <input type="text" class="form-control" name="place" value="<?php echo $place ?>" id="place" placeholder="Enter Company Place" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="title">Phone_Number1 :</label>
+                                        <label class="form-label" for="title">Phone Number 1 :</label>
                                         <input type="text" class="form-control" name="phone_number1" value="<?php echo $phone_number1 ?>" id="title" placeholder="Enter Primary PhoneNumber" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="title">Phone_Number2 :</label>
+                                        <label class="form-label" for="title">Phone Number 2 :</label>
                                         <input type="text" class="form-control" name="phone_number2" id="title" value="<?php echo $phone_number2 ?>" placeholder="Enter Secondary PhoneNumber" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label" for="title">e-mail :</label>
+                                        <label class="form-label" for="title">E-mail :</label>
                                         <input type="text" class="form-control" name="email" value="<?php echo $email ?>" id="title" placeholder="Enter Primary Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="title">Contact Form To :</label>
+                                        <input type="text" class="form-control" name="email2" value="<?php echo $email2 ?>" id="title" placeholder="Enter Email" required>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label" for="link">Website :</label>
@@ -113,12 +118,12 @@ include("style.php");
                                     </div>
                                     <label class="form-label" for="title">Twitter :</label>
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon3">https://instagram.com/</span>
+                                        <span class="input-group-text" id="basic-addon3">https://twitter.com/</span>
                                         <input type="text" class="form-control" id="basic-url" name="twitter" value="<?php echo $twitter ?>" aria-describedby="basic-addon3">
                                     </div>      
 
                                     <div class="d-flex justify-content-right mt-4 ">                                   
-                                        <button type="submit" class="btn submit_btn float-end submit_btn me-1 btn-sm" name="update_settings" style="background-color: #0d4c91;">UPDATE</button>
+                                        <button type="submit" class="btn submit_btn float-end submit_btn me-1 btn-sm" onclick="return confirm('Are you sure to update?');"  name="update_settings" style="background-color: #0d4c91;">UPDATE</button>
                                         <button type="button" class="btn btn-success submit_btn btn-sm" name="change_password" data-bs-toggle="modal" data-bs-target="#myModal" style="background-color: #7d1128;">CHANGE PASSWORD</button>
                                     </div>
                                 </form>

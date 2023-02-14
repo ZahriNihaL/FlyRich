@@ -19,20 +19,20 @@
                         $twitter = $row["twitter"];
                 ?>
                 <div class="col-lg-3">
-                    <a href="index.html"><img src="images/footer.png" alt="footer-logo" class="img-fluid"></a>
+                    <a href="index.html"><img src="http://localhost/github/FlyRich/images/footer.png" alt="footer-logo" class="img-fluid"></a>
                     <p class="light-color">Flyrich travels and lesuire is the leading travel company with strong presence in India and overseas</p>
                     <div class="d-flex mt-3">
-                        <a href="<?php echo $facebook ?>">
+                        <a href="https://facebook.com/<?php echo $facebook ?>" target="_blank">
                             <div class="icon-bg me-3 ">
                                 <i class="fa fa-facebook-f fb"></i>
                             </div>
                         </a>
-                        <a href="<?php echo $instagram ?>">
+                        <a href="https://instagram.com/<?php echo $instagram ?>" target="_blank">
                             <div class="icon-bg me-3 ">
                                 <i class="fa fa-instagram insta"></i>
                             </div>
                         </a>
-                        <a href="<?php echo $twitter ?>">
+                        <a href="https://twitter.com/<?php echo $twitter ?>" target="_blank">
                             <div class="icon-bg me-3 "> 
                                 <i class="fa fa-twitter twi"></i>
                             </div>
@@ -42,37 +42,38 @@
                 <div class="col-lg-3">
                     <ul class=" footer-links">
                         <li><h6 class="light-color">Features</h6></li>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="package.php">Packages</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="http://localhost/github/FlyRich/">Home</a></li>
+                        <li><a href="http://localhost/github/FlyRich/about">About</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Services</a></li>
+                        <li><a href="http://localhost/github/FlyRich/blogs">Blogs</a></li>
+                        <li><a href="http://localhost/github/FlyRich/packages">Packages</a></li>
+                        <li><a href="http://localhost/github/FlyRich/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <ul class=" footer-links">
-                        <li><h6 class="light-color">Quick Links</h6></li>
-                        <li><a href="#">Air Tickets</a></li>
-                        <li><a href="#">Visit visa services</a></li>
-                        <li><a href="#">Hajj and umrah services</a></li>
-                        <li><a href="#">Hotel Booking</a></li>
-                        <li><a href="#">Passport services</a></li>
-                        <li><a href="#">Holiday packages</a></li>
-                        <li><a href="#">Cruise packages</a></li>
-                        <li><a href="#">Medical Tourism</a></li>
+                        <li><h6 class="light-color">Our Services</h6></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Air Tickets</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Visit visa services</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Hajj and umrah services</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Hotel Booking</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Passport services</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Holiday packages</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Cruise packages</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Medical Tourism</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <ul class="footer-links">
-                        <li><h6 class="light-color">Quick Links</h6></li>
-                        <li><a href="#">Visa stamping </a></li>
-                        <li><a href="#">Saudi wakala</a></li>
-                        <li><a href="#">Certificate attestation</a></li>
-                        <li><a href="#">Train tickets & Bus tickets</a></li>
-                        <li><a href="#">Schengen visa services</a></li>
-                        <li><a href="#">European work permit </a></li>
-                        <li><a href="#">GCC Work permit</a></li>
-                        <li><a href="#">Study Abroad</a></li>
+                        <li><h6 class="light-color">Our Services</h6></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Visa stamping </a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Saudi wakala</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Certificate attestation</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Train tickets & Bus tickets</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Schengen visa services</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">European work permit </a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">GCC Work permit</a></li>
+                        <li><a href="http://localhost/github/FlyRich/services">Study Abroad</a></li>
                     </ul>
                 </div>
             </div>

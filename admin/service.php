@@ -70,7 +70,7 @@ include("style.php");
                             <div class="card data-card">
                                 <div class="card-body p-2 text-center">
                                     <img src="assets/images/service/<?php echo $img ?>" class="img-fluid"> 
-                                    <h5 class="fw-bold mt-2"><?php echo $title ?></h5>
+                                    <h6 class="fw-bold mt-2"><?php echo $title ?></h6>
                                     <div class="mt-2"><?php echo $description ?></div>
                                     <div class="d-flex justify-content-center mt-3">
                                         <form method="post" action="edit_service.php">
