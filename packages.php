@@ -10,7 +10,6 @@ include("style.php");
 <title>Blog - Flyrich travel and leisure</title>
 </head>
 <body>
-
     <!-- --------------------------------header start------------------------>
 
     <?php include("content/navbar.php") ?> 
@@ -24,7 +23,6 @@ include("style.php");
             <h3 class="fw-bold head-color">Explore Our Packages</h3>
             <i class="bi bi-airplane flight ms-2"></i>
         </div>
-
         <div class="row package-details">
             <?php
             $sql = "select * from tbl_package";
@@ -57,7 +55,6 @@ include("style.php");
             </div>
         <?php } ?>   
         </div>
-        
     </div>
 </section>
 

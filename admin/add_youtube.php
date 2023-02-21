@@ -1,15 +1,12 @@
 <?php
 include("assets/includes/db.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <?php
     include("style.php");
     ?>
-
 <title>YouTube</title>
 </head>
 <body>
@@ -27,7 +24,6 @@ include("assets/includes/db.php");
                         </div>
                     </div> 
                 </div>
-
                 <?php
                 if(isset($_GET["error"])){
                 ?>
@@ -37,7 +33,6 @@ include("assets/includes/db.php");
                         echo $error;
                         ?>
                     </div>
-
                 <?php
                 }else if(isset($_GET["success"])){
                 ?>
@@ -47,8 +42,7 @@ include("assets/includes/db.php");
                         echo $error;
                         ?>
                     </div>
-                <?php } ?>
-                   
+                <?php } ?>   
                 <div class="card custom-card-2 mt-2">
                     <div class="card-body p-4">
                         <form method="post" action="assets/functions/functions.php" enctype="multipart/form-data">  

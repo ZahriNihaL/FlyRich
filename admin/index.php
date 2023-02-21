@@ -159,7 +159,7 @@ include("style.php");
 </section>
 <?php include("assets/content/script.php"); ?>
 <script>
-        changeNav("home-nav");
+    changeNav("home-nav");
 </script>
 </body>
 </html>

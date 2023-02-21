@@ -61,7 +61,7 @@ include("style.php");
                                 </form>             
                                 <form method="post" action="assets/functions/functions.php">
                                     <input type="hidden" name="id" value="<?php echo $id ?>">
-                                    <button type="submit" name="delete_service" class="btn btn-danger btn-sm"  onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
+                                    <button type="submit" name="delete_youtube" class="btn btn-danger btn-sm"  onclick="return confirm('Are you sure to delete?');" style="background-color: #ac0404; border: 0;">Delete</button>
                                 </form>    
                             </td>   
                         </tr>

@@ -3,7 +3,6 @@ include("admin/assets/includes/db.php");
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
   <?php
   include("style.php");
@@ -23,14 +22,12 @@ include("admin/assets/includes/db.php");
   ?>
   <title><?php echo $title ?> - Flyrich travel and leisure</title>
 </head>
-
 <body>
   <!-- --------------------------------header start------------------------->
 
   <?php include("content/navbar.php") ?>
 
   <!-- -------------------------about-us start--------------------------- -->
-
 
   <section class="blog-details-explain">
     <div class="container">
@@ -42,10 +39,8 @@ include("admin/assets/includes/db.php");
       <div class="image-carousel">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-
           <div class="carousel-item active">
                         <div class="row justify-content-center">
-
                           <?php
                             $sql = "select * from tbl_package_img where pid='$pack_id'";
                             $run = mysqli_query($con , $sql);
@@ -57,24 +52,19 @@ include("admin/assets/includes/db.php");
                               $loop ++;
                               $img = $row["img"];
                           ?>
-
                           <div class="col-lg-4">
                               <img src="http://localhost/github/FlyRich/admin/assets/images/package/<?php echo $id ?>/<?php echo $img ?>" alt="blog-details-explain image" class="img-fluid w-100">
                           </div>
-
                             <?php
                               if ($loop % 3 == 0 || $loop == $count) {
                             ?>
-
                         </div>
                       </div>
-
                       <?php
                         if ($loop !=  $count) { 
                       ?>
                         <div class="carousel-item">
                         <div class="row">
-
                         <?php }
                             }
                           }

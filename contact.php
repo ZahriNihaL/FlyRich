@@ -33,7 +33,6 @@ include("style.php");
                         echo $error;
                         ?>
                     </div>
-
                 <?php
                 }else if(isset($_GET["success"])){
                 ?>
@@ -44,7 +43,6 @@ include("style.php");
                         ?>
                     </div>
                 <?php } ?>
-                  
                     <form method="POST" action="functions/functions.php">
                       <div class="mb-3">
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>

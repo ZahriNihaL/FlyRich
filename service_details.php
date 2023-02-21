@@ -3,7 +3,6 @@ include("admin/assets/includes/db.php");
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <?php
     include("style.php");
@@ -21,7 +20,6 @@ include("admin/assets/includes/db.php");
     ?>
     <title><?php echo $title ?> - Flyrich travel and leisure</title>
 </head>
-
 <body>
 
     <!-- --------------------------------header start------------------------->
@@ -30,20 +28,16 @@ include("admin/assets/includes/db.php");
 
     <!-- -------------------------about-us start--------------------------- -->
 
-
     <section class="service-details">
         <div class="heading">
-
             <h6 class="fw-bold text-white text-center">Service Details</h6>
             <div class="d-flex justify-content-center">
                 <h3 class="fw-bold text-white"><?php echo $title ?></h3>
                 <i class="bi bi-airplane flight ms-2"></i>
             </div>
         </div>
-
         <div class="container">
             <div class="row service-details-contents align-items-center">
-
                 <div class="col-lg-6">
                     <img src="http://localhost/github/FlyRich/admin/assets/images/service/<?php echo $img ?>" alt="blog details image" class="img-fluid">
                 </div>

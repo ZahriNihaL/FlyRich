@@ -4,10 +4,10 @@ include("admin/assets/includes/db.php");
 <!doctype html>
 <html lang="en">
 <head>
-    <?php
-    include("style.php");
-    ?>
-    <title>Flyrich</title>
+<?php
+include("style.php");
+?>
+<title>Flyrich</title>
 </head>
 <body>
 
@@ -26,7 +26,6 @@ include("admin/assets/includes/db.php");
                         <a href="about"><button class="btn mt-3">View More</button></a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -77,7 +76,6 @@ include("admin/assets/includes/db.php");
                 <h3 class="fw-bold head-color">Explore Our Services</h3>
                 <i class="bi bi-airplane flight ms-2"></i>
             </div>
-
             <div class="service-contents">
                 <div class="row justify-content-center">
                     <?php
@@ -263,7 +261,7 @@ include("admin/assets/includes/db.php");
                     $id = $row["id"];
                     $link = $row["link"];
                 ?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3">
                         <iframe src="<?php echo $link ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 <?php } ?>
